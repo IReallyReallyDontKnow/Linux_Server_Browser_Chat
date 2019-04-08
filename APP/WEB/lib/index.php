@@ -34,6 +34,14 @@ class index
   
   private function first_start()
   {
+    $form = array() {
+     ["host"]=> "<input class=start type=text name=host>"
+     ["port"]=> "<input class=start type=port name=port>"
+     ["user"]=> "<input class=start type=text name=>"
+     ["pass"]=> "<input class=start type=password name=>"
+    }
+  }
+    echo '<form action=index.php method=post>'.$form['host'].'</form>';
     $this->create_template(index,false);
   }
   
