@@ -37,11 +37,12 @@ class index
     $form = array() {
      ["host"]=> "<input class=start type=text name=host>"
      ["port"]=> "<input class=start type=port name=port>"
-     ["user"]=> "<input class=start type=text name=>"
-     ["pass"]=> "<input class=start type=password name=>"
+     ["user"]=> "<input class=start type=text name=user>"
+     ["pass"]=> "<input class=start type=password name=pass>"
+     ["submit"]=> "<input class=start type=submit name=submit>"
     }
   }
-    echo '<form action=index.php method=post>'.$form['host'].'</form>';
+    $what='<form action=index.php method=post>'.$form['host'].''.$form['port'].''.$form['user'].''.$form['pass'].''.$form['submit'].'</form>';
     $this->create_template(index,false);
   }
   
