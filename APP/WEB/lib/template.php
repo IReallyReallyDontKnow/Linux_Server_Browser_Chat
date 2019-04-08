@@ -12,6 +12,8 @@ class template
   {
     header("LOCATION: _DIR_/$this->where.php?sc=$this->how");
   }
+  
+  
 }
 
 ?>
