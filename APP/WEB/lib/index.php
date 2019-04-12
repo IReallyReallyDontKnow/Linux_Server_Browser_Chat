@@ -14,9 +14,15 @@ class index
     $this->config = $parse_array;
   }
   
+  private load_GET($input,$output)
+  {
+    return $output = $_GET[$input];  
+  }
   
   private function check_first_start()
   {
+    $this->load_GET();
+    $this->read_config();
     if($this->config['setup']['install'] == true)
     {
       $this->already_started();
