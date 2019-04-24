@@ -13,15 +13,9 @@ class index
     $parse_array = parse_ini_file('../default.ini');
     $this->config = $parse_array;
   }
-  
-  private load_GET($input,$output)
-  {
-    return $output = $_GET[$input];  
-  }
-  
+ 
   private function check_first_start()
   {
-    $this->load_GET();
     $this->read_config();
     if($this->config['setup']['install'] == true)
     {
